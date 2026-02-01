@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stocky • Controle de Estoque Inteligente</title>
+
+<style>
+:root {
+  --roxo: #6c2bd9;
+  --roxo-claro: #e6dfff;
+  --preto: #111;
+  --cinza: #666;
+  --branco: #fff;
+  --verde: #2ecc71;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--roxo-claro);
+  color: var(--preto);
+}
+
+header {
+  height: 100vh;
+  background: linear-gradient(135deg, #6c2bd9, #4b1fa6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+header svg {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+header p {
+  font-size: 18px;
+  max-width: 500px;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+header button {
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  background: var(--branco);
+  color: var(--roxo);
+  transition: 0.3s;
+}
+
+header button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 36px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  margin-bottom: 16px;
+  font-size: 22px;
+  color: var(--roxo);
+}
+
+.card p {
+  font-size: 16px;
+  color: var(--cinza);
+}
+
+.cta-section {
+  background: var(--roxo);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 32px;
+  margin: 60px 0;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 24px;
+}
+
+.cta-section button {
+  background: white;
+  color: var(--roxo);
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background: var(--preto);
+  color: #bbb;
+  text-align: center;
+  padding: 32px 20px;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header>
+  <svg viewBox="0 0 64 64">
+    <rect x="6" y="6" width="52" height="52" rx="14" fill="white"/>
+    <rect x="18" y="18" width="28" height="28" rx="6" fill="#6c2bd9"/>
+    <path d="M18 28h28M18 36h28" stroke="white" stroke-width="2"/>
+  </svg>
+  <h1>Stocky</h1>
+  <p>Controle inteligente do seu estoque em um só lugar.<br>
+  Organize entradas, saídas, categorias e relatórios profissionais com apenas alguns cliques.</p>
+  <button onclick="window.location.href='#cta'">Comece Agora</button>
+</header>
+
+<!-- BENEFÍCIOS -->
+<section>
+  <h2>Por que escolher o Stocky?</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Gestão Simples</h3>
+      <p>Sem planilhas complexas ou softwares complicados. Tudo na palma da mão.</p>
+    </div>
+    <div class="card">
+      <h3>Relatórios Profissionais</h3>
+      <p>Gere PDF detalhado ou envie para WhatsApp com dados precisos.</p>
+    </div>
+    <div class="card">
+      <h3>Controle Completo</h3>
+      <p>Entrada, saída e estoque por categoria. Histórico sempre salvo.</p>
+    </div>
+    <div class="card">
+      <h3>Design Intuitivo</h3>
+      <p>Visual moderno e fluído, perfeito para desktop e celular.</p>
+    </div>
+    <div class="card">
+      <h3>Análise por Período</h3>
+      <p>Veja exatamente o que entrou e saiu em qualquer intervalo de tempo.</p>
+    </div>
+    <div class="card">
+      <h3>Seguro & Persistente</h3>
+      <p>Todos os dados são salvos no navegador, sempre disponíveis.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="cta-section">
+  <h2>Pronto para transformar a gestão do seu estoque?</h2>
+  <button onclick="window.location.href='/app'">Acessar o Stocky Agora</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Stocky • Controle de Estoque Inteligente • Todos os direitos reservados
+</footer>
+
+</body>
+</html>
